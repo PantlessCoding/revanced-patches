@@ -27,7 +27,7 @@ object HideSponsoredStoriesPatch : BytecodePatch(setOf(GetStoryVisibilityFingerp
             // Hide stories with sponsored data defined
             // Check if param type is GraphQLStory
             // If so calling the sponsoredDataModelGetter, only sponsored content has non-null data
-            // Sponsored Stories gets their visibility forced to StoryVisibility.GONE
+            // Sponsored Stories gets their visibility forced to StoryVisibility.GONE 
             mutableMethod.addInstructionsWithLabels(scanResult.patternScanResult!!.startIndex, """
                     instance-of v0, p0, Lcom/facebook/graphql/model/GraphQLStory;
                     if-eqz v0, :resume_normal
